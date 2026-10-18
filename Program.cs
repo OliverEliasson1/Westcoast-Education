@@ -8,40 +8,47 @@ class Program
         
         while (true)
         {
-            
-            string courseName = Console.ReadLine();
-            int length = int.Parse(Console.ReadLine());
-            string courseLength = Console.ReadLine();
-            string courseType = Console.ReadLine();
-
-            Course course = new(courseName, length, courseLength, courseType);
-
-            courses.Add(course);
-
-            Console.WriteLine("Do you want to add another? (y/n)");
+            Console.WriteLine("Välkommen till Westcoast Education");
+            Console.WriteLine("1. Visa kurser");
+            Console.WriteLine("2. Lägg till kurser");
+            Console.WriteLine("3. Avsluta");
             var key = Console.ReadLine();
-
-            if (key == "y")
+            switch (key)
             {
-                continue;
-            }
+                case "1":
+                    bool isEmpty = !courses.Any();
 
-            if (key == "n")
-            {
-                foreach (var item in courses)
-                {
-                    Console.WriteLine(item);
-                }
-            break;
-            }
+                    if (isEmpty)
+                    {
+                        Console.WriteLine("Listan är tom");
+                    }
+                    foreach (var item in courses)
+                    {
+                        Console.WriteLine(item);
+                    }
+                break;
+                case "2":
+                    Console.Write("Kursnamn: ");
+                    string courseName = Console.ReadLine();
+                    Console.Write("Längd (dagar eller veckor): ");
+                    int length = int.Parse(Console.ReadLine());
+                    Console.Write("Dagar eller veckor?: ");
+                    string courseLength = Console.ReadLine();
+                    Console.Write("Klassrum, distans eller hybrid?: ");
+                    string courseType = Console.ReadLine();
 
-            
+                    Course course = new(courseName, length, courseLength, courseType);
+
+                    courses.Add(course);
+                break;
+                case "3":
+                Environment.Exit(0);
+                break;
+
+                default:
+                break;
+            }
         }
-        
-
-
-        
-        
     }
 }
 
