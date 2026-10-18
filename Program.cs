@@ -2,24 +2,45 @@
 
 class Program
 {
+    public static List<Course> courses = [];
     static void Main()
     {
-        List<Course> courses = [];
-
-        string courseName = Console.ReadLine();
-        int length = int.Parse(Console.ReadLine());
-        string courseLength = Console.ReadLine();
-        string courseType = Console.ReadLine();
-
-        Course course = new(courseName, length, courseLength, courseType)
-
-        courses.Add(course);
-
-
-        foreach (var item in courses)
+        
+        while (true)
         {
-            Console.WriteLine(item);
+            
+            string courseName = Console.ReadLine();
+            int length = int.Parse(Console.ReadLine());
+            string courseLength = Console.ReadLine();
+            string courseType = Console.ReadLine();
+
+            Course course = new(courseName, length, courseLength, courseType);
+
+            courses.Add(course);
+
+            Console.WriteLine("Do you want to add another? (y/n)");
+            var key = Console.ReadLine();
+
+            if (key == "y")
+            {
+                continue;
+            }
+
+            if (key == "n")
+            {
+                foreach (var item in courses)
+                {
+                    Console.WriteLine(item);
+                }
+            break;
+            }
+
+            
         }
+        
+
+
+        
         
     }
 }
