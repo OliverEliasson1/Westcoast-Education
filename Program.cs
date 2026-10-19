@@ -1,14 +1,21 @@
 ﻿namespace Westcoast_Education;
 
+using Westcoast_Education.Persistence;
+using Westcoast_Education.Models;
 class Program
 {
-    public static List<Course> courses = [];
+    static string path = string.Concat(Environment.CurrentDirectory,"/Data/Courses.json");
+    
     static void Main()
     {
-            Console.WriteLine("Välkommen till Westcoast Education");
-            Console.WriteLine("1. Visa kurser");
-            Console.WriteLine("2. Lägg till kurser");
-            Console.WriteLine("3. Avsluta");
+        
+        List<Course> courses = [];
+        courses = Storage<Course>.Read(path);
+    
+        Console.WriteLine("Välkommen till Westcoast Education");
+        Console.WriteLine("1. Visa kurser");
+        Console.WriteLine("2. Lägg till kurser");
+        Console.WriteLine("3. Avsluta");
         
         while (true)
         {
@@ -26,6 +33,7 @@ class Program
                     foreach (var item in courses)
                     {
                         Console.WriteLine(item);
+                        Console.WriteLine("");
                     }
                 break;
                 case "2":
@@ -41,6 +49,7 @@ class Program
                     Course course = new(courseName, length, courseLength, courseType);
 
                     courses.Add(course);
+                    Storage<Course>.Write(courses, path);
                 break;
                 case "3":
                 Environment.Exit(0);

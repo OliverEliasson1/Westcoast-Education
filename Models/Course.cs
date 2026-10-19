@@ -1,6 +1,6 @@
-﻿namespace Westcoast_Education;
+﻿namespace Westcoast_Education.Models;
 
-class Course(string courseName, int length, string courseLength, string courseType)
+public class Course(string courseName, int length, string courseLength, string courseType)
 {
     public string CourseName { get; set; } = courseName;
     public int Length { get; set; } = length;
@@ -9,6 +9,6 @@ class Course(string courseName, int length, string courseLength, string courseTy
 
     public override string ToString()
     {
-        return $"Kursnamn: {CourseName} - Längd: {Length} {CourseLength} - Typ: {CourseType}";
+        return $"Kursnamn: {CourseName}\nLängd: {Length} {CourseLength}\nTyp: {CourseType}";
     }
 }
