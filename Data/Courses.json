@@ -4,5 +4,11 @@
     "length": 23,
     "courseLength": "kiss",
     "courseType": "distans"
+  },
+  {
+    "courseName": "ja",
+    "length": 23,
+    "courseLength": "dagar",
+    "courseType": "distans"
   }
 ]
