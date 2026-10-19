@@ -1,14 +1,8 @@
 [
   {
-    "courseName": "NCD26G",
-    "length": 40,
-    "courseLength": "Veckor",
-    "courseType": "hybrid"
-  },
-  {
-    "courseName": "WEB26S",
-    "length": 40,
-    "courseLength": "dagar",
+    "courseName": "Bajs",
+    "length": 23,
+    "courseLength": "kiss",
     "courseType": "distans"
   }
 ]

@@ -5,7 +5,6 @@ namespace Westcoast_Education.Persistence;
 
 public class Storage<T>()
 {
-    
     private static readonly JsonSerializerOptions _options = new()
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
@@ -16,6 +15,11 @@ public class Storage<T>()
 
     public static List<T> Read(string path)
     {
+        if (!File.Exists(path))
+        {
+            return [];
+        }
+
         try
         {
             string data = File.ReadAllText(path);
@@ -35,11 +39,12 @@ public class Storage<T>()
         }
     }
 
-    public static void Write(List<T> courses, string path)
+    public static void Write(List<T> items, string path)
     {
+        Directory.CreateDirectory(Path.GetDirectoryName(path)!);
         try
         {
-            string json = JsonSerializer.Serialize(courses, _options);
+            string json = JsonSerializer.Serialize(items, _options);
             File.WriteAllText(path, json);
         }
         catch (Exception ex)
