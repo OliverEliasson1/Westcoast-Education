@@ -2,10 +2,10 @@
 
 namespace Westcoast_Education.Models;
 
-public class Student() : Person, IHasPersonalIdentityNumber
+public class Student : Person, IHasPersonalIdentityNumber
 {
     public required string PersonalIdentityNumber { get; set; }
-    public required Address Address { get; set; }
+    
 
     public override string ToString()
     {

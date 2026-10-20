@@ -1,5 +1,4 @@
-﻿using System.Security.Cryptography;
-using Westcoast_Education.Enums;
+﻿using Westcoast_Education.Enums;
 
 namespace Westcoast_Education.Models;
 

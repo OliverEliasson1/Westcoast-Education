@@ -51,7 +51,7 @@ class Program
                     }
                 break;
                 case "4":
-                    Console.Write("Elevens personnummer");
+                    Console.Write("Elevens personnummer: ");
                     string personalNumber = Console.ReadLine();
                     Console.Write("Elevens förnamn: ");
                     string firstName = Console.ReadLine();
@@ -61,11 +61,11 @@ class Program
                     string email = Console.ReadLine();
                     Console.Write("Elevens telefonnummer: ");
                     string phoneNumber = Console.ReadLine();
-                    Console.Write("Elevens gatuadress:");
+                    Console.Write("Elevens gatuadress: ");
                     string streetAddress = Console.ReadLine();
                     Console.Write("Elevens postnummer: ");
                     string postalCode = Console.ReadLine();
-                    Console.Write("Elevens stad");
+                    Console.Write("Elevens stad: ");
                     string city = Console.ReadLine();
 
                     Student student = new Student
