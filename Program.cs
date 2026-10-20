@@ -1,5 +1,6 @@
 ﻿using Westcoast_Education.Persistence;
 using Westcoast_Education.Services;
+using Westcoast_Education.Models;
 
 namespace Westcoast_Education;
 

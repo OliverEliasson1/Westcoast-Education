@@ -11,6 +11,8 @@ public class CourseService
     static readonly List<Course> courses = Storage<Course>.Read(path);
     public static void AddCourse()
     {
+        Console.Write("Kursnummer: ");
+        string courseNumber = Console.ReadLine();
         Console.Write("Kursnamn: ");
         string courseName = Console.ReadLine();
         Console.Write("Längd (dagar eller veckor): ");
@@ -24,7 +26,7 @@ public class CourseService
         Console.Write("Slutdatum: ");
         string endDate = Console.ReadLine();
 
-        Course course = new(courseName, length, courseLength, courseType, startDate, endDate);
+        Course course = new(courseNumber, courseName, length, courseLength, courseType);
 
         courses.Add(course);
         Storage<Course>.Write(courses, path);

@@ -1,4 +1,4 @@
-﻿namespace Westcoast_Education;
+﻿namespace Westcoast_Education.Models;
 
 public class Address
 {

@@ -1,18 +1,20 @@
 ﻿using System.Security.Cryptography;
+using Westcoast_Education.Enums;
 
 namespace Westcoast_Education.Models;
 
-public class Course(string courseName, int length, string courseLength, string courseType, string startDate, string endDate)
+public class Course(string courseNumber, string courseName, int length, string courseLength, string courseType)
 {
+    public string CourseNumber { get; set; } = courseNumber;
     public string CourseName { get; set; } = courseName;
     public int Length { get; set; } = length;
-    public string CourseLength { get; set; } = courseLength;
-    public string CourseType { get; set; } = courseType;
-    public string StartDate { get; set; } = startDate;
-    public string EndDate { get; set; } = endDate;
+    public CourseLengthEnum courseLength;
+    public CourseTypeEnum courseType;
+    public DateOnly StartDate { get; set; }
+    public DateOnly EndDate { get; set; }
 
     public override string ToString()
     {
-        return $"Kursnamn: {CourseName}\nLängd: {Length} {CourseLength}\nTyp: {CourseType}";
+        return $"Kursnamn: {CourseName}\nLängd: {Length} {courseLength}\nTyp: {courseType}";
     }
 }

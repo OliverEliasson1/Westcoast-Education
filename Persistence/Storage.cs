@@ -4,7 +4,7 @@ using Westcoast_Education.Interface;
 
 namespace Westcoast_Education.Persistence;
 
-public class Storage<T>() : IStorage
+public class Storage<T>()
 {
     private static readonly JsonSerializerOptions _options = new()
     {
