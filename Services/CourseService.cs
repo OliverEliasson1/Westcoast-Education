@@ -1,4 +1,5 @@
-﻿using Westcoast_Education.Models;
+﻿using System.Collections.Specialized;
+using Westcoast_Education.Models;
 using Westcoast_Education.Persistence;
 
 
@@ -16,10 +17,14 @@ public class CourseService
         int length = int.Parse(Console.ReadLine());
         Console.Write("Dagar eller veckor?: ");
         string courseLength = Console.ReadLine();
-        Console.Write("Klassrum, distans eller hybrid?: ");
+        Console.Write("Klassrum, Distans eller Hybrid?: ");
         string courseType = Console.ReadLine();
+        Console.Write("Startdatum: ");
+        string startDate = Console.ReadLine();
+        Console.Write("Slutdatum: ");
+        string endDate = Console.ReadLine();
 
-        Course course = new(courseName, length, courseLength, courseType);
+        Course course = new(courseName, length, courseLength, courseType, startDate, endDate);
 
         courses.Add(course);
         Storage<Course>.Write(courses, path);

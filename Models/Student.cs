@@ -1,6 +1,8 @@
-﻿namespace Westcoast_Education;
+﻿using Westcoast_Education.Interface;
 
-public class Student() : Person
+namespace Westcoast_Education;
+
+public class Student() : Person, IHasIdentityNumber
 {
     public required string PersonalIdentityNumber { get; set; }
     public required Address Address { get; set; }

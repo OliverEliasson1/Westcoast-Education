@@ -1,9 +1,10 @@
 ﻿using System.Text.Encodings.Web;
 using System.Text.Json;
+using Westcoast_Education.Interface;
 
 namespace Westcoast_Education.Persistence;
 
-public class Storage<T>()
+public class Storage<T>() : IStorage
 {
     private static readonly JsonSerializerOptions _options = new()
     {
