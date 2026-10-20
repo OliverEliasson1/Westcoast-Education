@@ -3,8 +3,8 @@ using Westcoast_Education.Interface;
 
 namespace Westcoast_Education.Models;
 
-public class Administrator : Person, IHasIdentityNumber
+public class Administrator : Person, IHasPersonalIdentityNumber
 {
-    public string PersonalIdentityNumber { get; set; }
+    public required string PersonalIdentityNumber { get; set; }
 
 }

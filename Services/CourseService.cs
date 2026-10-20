@@ -1,6 +1,7 @@
-﻿using System.Collections.Specialized;
-using Westcoast_Education.Models;
+﻿using Westcoast_Education.Models;
 using Westcoast_Education.Persistence;
+using Westcoast_Education.Enums;
+using System.Collections;
 
 
 namespace Westcoast_Education.Services;
@@ -14,19 +15,30 @@ public class CourseService
         Console.Write("Kursnummer: ");
         string courseNumber = Console.ReadLine();
         Console.Write("Kursnamn: ");
-        string courseName = Console.ReadLine();
+        string title = Console.ReadLine();
         Console.Write("Längd (dagar eller veckor): ");
         int length = int.Parse(Console.ReadLine());
         Console.Write("Dagar eller veckor?: ");
-        string courseLength = Console.ReadLine();
+        LengthUnitEnum lengthUnit = Console.ReadLine();
         Console.Write("Klassrum, Distans eller Hybrid?: ");
-        string courseType = Console.ReadLine();
+        string courseTypeString = Console.ReadLine();
         Console.Write("Startdatum: ");
-        string startDate = Console.ReadLine();
+        DateOnly startDate = Console.ReadLine();
         Console.Write("Slutdatum: ");
-        string endDate = Console.ReadLine();
+        DateOnly endDate = Console.ReadLine();
 
-        Course course = new(courseNumber, courseName, length, courseLength, courseType);
+        CourseTypeEnum courseType = courseTypeString switch{"1"=>CourseTypeEnum.Classroom, "2" => CourseTypeEnum.Distance, "3" => CourseTypeEnum.Hybrid, _ => CourseTypeEnum.Unknown};
+
+        Course course = new Course
+        {
+            CourseNumber = courseNumber,
+            Title = title,
+            Length = length,
+            LengthUnit = lengthUnit,
+            CourseType = courseType,
+            StartDate = startDate,
+            EndDate = endDate
+        };
 
         courses.Add(course);
         Storage<Course>.Write(courses, path);

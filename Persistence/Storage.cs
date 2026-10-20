@@ -1,5 +1,7 @@
 ﻿using System.Text.Encodings.Web;
 using System.Text.Json;
+using System.Text.Json.Serialization;
+using Westcoast_Education.Enums;
 using Westcoast_Education.Interface;
 
 namespace Westcoast_Education.Persistence;
@@ -10,6 +12,7 @@ public class Storage<T>()
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
         Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+        Converters = JsonStringEnumConverter.Equals(CourseTypeEnum courseType),
         WriteIndented = true,
         PropertyNameCaseInsensitive = true
     };

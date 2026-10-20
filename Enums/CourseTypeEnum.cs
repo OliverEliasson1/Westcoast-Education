@@ -4,5 +4,6 @@ public enum CourseTypeEnum
 {
     Classroom,
     Distance,
-    Hybrid
+    Hybrid,
+    Unknown
 }

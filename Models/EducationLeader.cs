@@ -3,7 +3,7 @@ using Westcoast_Education.Interface;
 
 namespace Westcoast_Education.Models;
 
-public class EducationLeader : Person, IHasIdentityNumber
+public class EducationLeader : Person, IHasPersonalIdentityNumber
 {
-    public string PersonalIdentityNumber { get; set; }
+    public required string PersonalIdentityNumber { get; set; }
 }

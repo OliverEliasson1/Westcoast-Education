@@ -1,6 +1,6 @@
 namespace Westcoast_Education.Enums;
 
-public enum CourseLengthEnum
+public enum LengthUnitEnum
 {
     Weeks,
     Days,

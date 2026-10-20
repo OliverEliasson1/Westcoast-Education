@@ -2,7 +2,7 @@ using System;
 
 namespace Westcoast_Education.Interface;
 
-public interface IHasIdentityNumber
+public interface IHasPersonalIdentityNumber
 {
     string PersonalIdentityNumber { get;}
 }
