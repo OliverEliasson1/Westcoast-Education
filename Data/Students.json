@@ -1,14 +1,62 @@
 [
   {
-    "personalIdentityNumber": "1321543252134",
+    "personalIdentityNumber": "19980412-2385",
+    "firstName": "Emma",
+    "lastName": "Lindqvist",
+    "email": "emma.lindqvist@example.com",
+    "phoneNumber": "070-1740605",
     "address": {
-      "streetAddress": "jbsdofgh",
-      "postalCode": "234123",
-      "city": "kjsndfg"
-    },
-    "firstName": "Sjfnase",
-    "lastName": "uiewfu",
-    "email": "isahdbfipsher",
-    "phoneNumber": "2431512"
+      "streetAddress": "Strandvägen 12",
+      "postalCode": "442 31",
+      "city": "Kungälv"
+    }
+  },
+  {
+    "personalIdentityNumber": "20010923-4417",
+    "firstName": "Ali",
+    "lastName": "Hassan",
+    "email": "ali.hassan@example.com",
+    "phoneNumber": "070-1740612",
+    "address": {
+      "streetAddress": "Kvarnbergsgatan 4",
+      "postalCode": "411 05",
+      "city": "Göteborg"
+    }
+  },
+  {
+    "personalIdentityNumber": "19950207-6621",
+    "firstName": "Sara",
+    "lastName": "Johansson",
+    "email": "sara.johansson@example.com",
+    "phoneNumber": "070-1740628",
+    "address": {
+      "streetAddress": "Hamnvägen 7",
+      "postalCode": "444 30",
+      "city": "Stenungsund"
+    }
+  },
+  {
+    "personalIdentityNumber": "20000615-3158",
+    "firstName": "Johan",
+    "lastName": "Berg",
+    "email": "johan.berg@example.com",
+    "phoneNumber": "070-1740641",
+    "address": {
+      "streetAddress": "Ekdalsvägen 21",
+      "postalCode": "449 30",
+      "city": "Nödinge"
+    }
+  },
+  {
+    "personalIdentityNumber": "19971130-5042",
+    "firstName": "Linnea",
+    "lastName": "Karlsson",
+    "email": "linnea.karlsson@example.com",
+    "phoneNumber": "070-1740657",
+    "address": {
+      "streetAddress": "Tjörnvägen 3",
+      "postalCode": "471 32",
+      "city": "Skärhamn"
+    }
   }
 ]
