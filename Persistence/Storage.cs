@@ -12,7 +12,7 @@ public class Storage<T>()
     {
         PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
         Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
-        Converters = JsonStringEnumConverter.Equals(CourseTypeEnum courseType),
+        Converters = {new JsonStringEnumConverter()},
         WriteIndented = true,
         PropertyNameCaseInsensitive = true
     };

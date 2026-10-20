@@ -1,54 +1,54 @@
 [
   {
     "courseNumber": "NET-101",
-    "courseName": "C# och .NET grunder",
+    "Title": "C# och .NET grunder",
     "length": 8,
-    "courseLength": "Weeks",
+    "LengthUnit": "Weeks",
     "courseType": "Classroom",
     "startDate": "2026-11-02",
     "endDate": "2026-12-25"
   },
   {
     "courseNumber": "WEB-110",
-    "courseName": "HTML, CSS och JavaScript",
+    "Title": "HTML, CSS och JavaScript",
     "length": 6,
-    "courseLength": "Weeks",
+    "LengthUnit": "Weeks",
     "courseType": "Distance",
     "startDate": "2026-11-09",
     "endDate": "2026-12-18"
   },
   {
     "courseNumber": "WEB-210",
-    "courseName": "React för webbutvecklare",
+    "Title": "React för webbutvecklare",
     "length": 10,
-    "courseLength": "Weeks",
+    "LengthUnit": "Weeks",
     "courseType": "Classroom",
     "startDate": "2027-01-11",
     "endDate": "2027-03-19"
   },
   {
     "courseNumber": "MOB-150",
-    "courseName": "Mobilutveckling med .NET MAUI",
+    "Title": "Mobilutveckling med .NET MAUI",
     "length": 8,
-    "courseLength": "Weeks",
+    "LengthUnit": "Weeks",
     "courseType": "Distance",
     "startDate": "2027-01-18",
     "endDate": "2027-03-12"
   },
   {
     "courseNumber": "SEM-010",
-    "courseName": "Git och GitHub i praktiken",
+    "Title": "Git och GitHub i praktiken",
     "length": 2,
-    "courseLength": "Days",
+    "LengthUnit": "Days",
     "courseType": "Classroom",
     "startDate": "2026-11-23",
     "endDate": "2026-11-24"
   },
   {
     "courseNumber": "SEM-020",
-    "courseName": "Introduktion till Azure",
+    "Title": "Introduktion till Azure",
     "length": 3,
-    "courseLength": "Days",
+    "LengthUnit": "Days",
     "courseType": "Distance",
     "startDate": "2026-12-07",
     "endDate": "2026-12-09"

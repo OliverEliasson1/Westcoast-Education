@@ -4,4 +4,5 @@ public enum LengthUnitEnum
 {
     Weeks,
     Days,
+    Unknown
 }
