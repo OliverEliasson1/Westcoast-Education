@@ -9,6 +9,6 @@ public class Student : Person, IHasPersonalIdentityNumber
 
     public override string ToString()
     {
-        return $"{base.ToString()}\nPersonnummer: {PersonalIdentityNumber}\nAdress: {Address}";
+        return $"{base.ToString()}\nPersonnummer: {PersonalIdentityNumber}";
     }
 }

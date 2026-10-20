@@ -9,6 +9,6 @@ public class EducationLeader : Teacher, IHasPersonalIdentityNumber
 
     public override string ToString()
     {
-        return $"{base.ToString}\nAnställningsdatum: {EmploymentDate}";
+        return $"{base.ToString()}\nPersonnummer: {PersonalIdentityNumber}\nAnställningsdatum: {EmploymentDate}";
     }
 }

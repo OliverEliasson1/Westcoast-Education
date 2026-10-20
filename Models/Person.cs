@@ -10,6 +10,6 @@ public abstract class Person
 
     public override string ToString()
     {
-        return $"Förnamn: {FirstName}\nEfternamn: {LastName}\nEmail: {Email}\nTelefon: {PhoneNumber}";
+        return $"Förnamn: {FirstName}\nEfternamn: {LastName}\nEmail: {Email}\nTelefon: {PhoneNumber}\nAdress: {Address}";
     }
 }
